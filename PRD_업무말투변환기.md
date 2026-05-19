@@ -90,7 +90,7 @@ AI도 사람도 "끝"의 기준이 명확해야 헤매지 않습니다. 기준 �
 - [ ] 수신 대상(4종)에 따라 다른 프롬프트가 적용된다
 - [ ] CORS 설정이 되어 있어 프론트엔드에서 호출 가능하다
 - [ ] 프론트엔드 'index.html' FastAPI에 서버에서 요청되도록 static page 라우팅 기능이 있어야 한다
-- [ ] `.env` 파일로 API 키를 관리하고, `.gitignore`에 등록되어 있다
+- [x] `.env` 파일로 API 키를 관리하고, `.gitignore`에 등록되어 있다
 
 ### 프론트엔드
 
@@ -103,7 +103,7 @@ AI도 사람도 "끝"의 기준이 명확해야 헤매지 않습니다. 기준 �
 
 ### 배포
 
-- [ ] GitHub 레포지토리에 코드가 올라가 있다
+- [x] GitHub 레포지토리에 코드가 올라가 있다
 - [ ] Vercel에서 프론트엔드가 정상 접속된다
 - [ ] 배포된 URL에서 실제 변환이 작동한다
 - [ ] Backend 와 Frontend 모두 Vercel 같이 Deploy 되도록 한다
@@ -114,10 +114,10 @@ AI도 사람도 "끝"의 기준이 명확해야 헤매지 않습니다. 기준 �
 | 영역 | 기술 | 비고 |
 |------|------|------|
 | 프론트엔드 | HTML5 / CSS3 / JavaScript (ES6+) | 프레임워크 없음 |
-| 백엔드 | Python 3.11+ / FastAPI / Uvicorn | |
-| AI 연동 | LangChain / langchain-upstage | |
+| 백엔드 | Python 3.11+ / FastAPI 0.136.1 / Uvicorn 0.47.0 | |
+| AI 연동 | LangChain 1.3.1 / langchain-upstage 0.7.7 | |
 | AI 모델 | Upstage Solar-Pro2 | |
-| 환경 변수 | python-dotenv | `.env` 파일 관리 |
+| 환경 변수 | python-dotenv 1.2.2 | `.env` 파일 관리 |
 | 버전 관리 | Git / GitHub | |
 | 배포 | Vercel | 프론트엔드 정적 배포 |
 
@@ -128,7 +128,7 @@ AI도 사람도 "끝"의 기준이 명확해야 헤매지 않습니다. 기준 �
 python --version
 
 # 패키지 설치
-pip install fastapi uvicorn langchain python-dotenv langchain-upstage
+pip install fastapi==0.136.1 uvicorn==0.47.0 langchain==1.3.1 python-dotenv==1.2.2 langchain-upstage==0.7.7 pydantic==2.13.4
 
 # Git 설치 확인
 git --version
@@ -285,11 +285,11 @@ Content-Type: application/json
 
 ### STEP 1. 환경 준비 (30분)
 
-1. GitHub 레포지토리 생성 (`biztone-converter`)
-2. 디렉토리 구조 생성
-3. `.gitignore` 작성 — `.env` 반드시 포함
-4. Upstage API 키 발급 및 `.env` 파일 작성
-5. `requirements.txt` 작성 및 패키지 설치
+1. [x] GitHub 레포지토리 생성 (`BizTalk_GeminiGLI`)
+2. [x] 디렉토리 구조 생성
+3. [x] `.gitignore` 작성 — `.env` 반드시 포함
+4. [x] Upstage API 키 발급 및 `.env` 파일 작성
+5. [x] `requirements.txt` 작성 및 패키지 설치
 
 ---
 
@@ -466,12 +466,12 @@ node_modules/
 ### requirements.txt
 
 ```
-fastapi
-uvicorn
-langchain
-langchain-upstage
-python-dotenv
-pydantic
+fastapi==0.136.1
+uvicorn==0.47.0
+langchain==1.3.1
+langchain-upstage==0.7.7
+python-dotenv==1.2.2
+pydantic==2.13.4
 ```
 
 ### 로컬 실행 명령어
