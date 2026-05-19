@@ -83,13 +83,13 @@ AI도 사람도 "끝"의 기준이 명확해야 헤매지 않습니다. 기준 �
 
 ### 백엔드
 
-- [ ] FastAPI 서버가 로컬에서 정상 실행된다 (`uvicorn main:app`)
-- [ ] Health Check 기능이 존재해야 한다
-- [ ] `POST /api/convert` 엔드포인트가 존재한다
-- [ ] Upstage Solar-Pro2 API 호출이 정상 작동한다
-- [ ] 수신 대상(4종)에 따라 다른 프롬프트가 적용된다
-- [ ] CORS 설정이 되어 있어 프론트엔드에서 호출 가능하다
-- [ ] 프론트엔드 'index.html' FastAPI에 서버에서 요청되도록 static page 라우팅 기능이 있어야 한다
+- [x] FastAPI 서버가 로컬에서 정상 실행된다 (`uvicorn main:app`)
+- [x] Health Check 기능이 존재해야 한다
+- [x] `POST /api/convert` 엔드포인트가 존재한다
+- [x] Upstage Solar-Pro2 API 호출이 정상 작동한다
+- [x] 수신 대상(4종)에 따라 다른 프롬프트가 적용된다
+- [x] CORS 설정이 되어 있어 프론트엔드에서 호출 가능하다
+- [x] 프론트엔드 'index.html' FastAPI에 서버에서 요청되도록 static page 라우팅 기능이 있어야 한다
 - [x] `.env` 파일로 API 키를 관리하고, `.gitignore`에 등록되어 있다
 
 ### 프론트엔드
@@ -299,12 +299,12 @@ Content-Type: application/json
 
 **구현 순서**
 
-1. `schemas.py` — 데이터 모델 정의(요청/응답 데이터 모델 정의)
-2. `templates.py` — 프롬프트 템플릿 작성(수신 대상별 프롬프트 템플릿 작성)
-3. `tone_converter.py` — 핵심 변환 로직 구현(LangChain + Solar-Pro2 연동)
-4. `convert.py` — API 라우터 구현
-5. `main.py` — 메인 앱 설정(FastAPI 앱 + CORS 설정)
-6. 로컬 서버 실행 및 테스트 (`uvicorn main:app --reload`)
+1. [x] `schemas.py` — 데이터 모델 정의(요청/응답 데이터 모델 정의)
+2. [x] `templates.py` — 프롬프트 템플릿 작성(수신 대상별 프롬프트 템플릿 작성)
+3. [x] `tone_converter.py` — 핵심 변환 로직 구현(LangChain + Solar-Pro2 연동)
+4. [x] `convert.py` — API 라우터 구현
+5. [x] `main.py` — 메인 앱 설정(FastAPI 앱 + CORS 설정)
+6. [x] 로컬 서버 실행 및 테스트 (`uvicorn main:app --reload`)
 
 **핵심 코드 구조 참고**
 
